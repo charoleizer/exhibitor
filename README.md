@@ -12,4 +12,29 @@ Choose the interpreter on IDE and install the packages
 ```sh
 $ pip install -r requirements.txt
 ```
-Then, run app.py file
+Run app.py file
+
+Go to http://localhost:5000/graphql test queries
+
+Query example :
+```sh
+{
+  allProduct {
+    edges {
+      node {
+        txName
+        txCategory {
+          txName
+        }
+        tx1stBrand {
+          txName
+        }
+        txPlatform {
+          txName
+        }
+      }
+    }
+  }
+}
+
+```
