@@ -22,8 +22,6 @@ jobs:
             py.test --cov=tests --cov=core --cov-report xml
             ./cc-test-reporter after-build --coverage-input-type coverage.py --exit-code $?
         
-        env:
-          CC_TEST_REPORTER_ID: cdfdef2e505117577cfd3a5771853df55e157b48fb5f2cb6d1d19c60d27fc55f
 workflows:
   main:
     jobs:
