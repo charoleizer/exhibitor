@@ -2,6 +2,7 @@ aniso8601==7.0.0
 astroid==2.3.3
 attrs==19.3.0
 click==7.1.1
+coverage==5.1
 Flask==1.1.2
 Flask-GraphQL==2.0.1
 graphene==2.1.8
@@ -26,6 +27,7 @@ py==1.8.1
 pylint==2.4.4
 pyparsing==2.4.7
 pytest==5.4.1
+pytest-cov==2.8.1
 Rx==1.6.1
 singledispatch==3.4.0.3
 six==1.14.0
