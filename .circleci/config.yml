@@ -12,7 +12,10 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: python ./app.py test
+          command: |
+            ./cc-test-reporter before-build
+            py.test --cov=tests --cov=core --cov-report xml
+            ./cc-test-reporter after-build --coverage-input-type coverage --exit-code $?
           name: Test
 
 workflows:
