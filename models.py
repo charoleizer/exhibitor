@@ -69,7 +69,7 @@ class Product(Base):
     )
 
     nr_height = Column(Numeric)         
-    nr_depth = Column(Numeric)               
+    nr_depth = Column(Numeric)          
     nr_weight = Column(Numeric)   
-    nr_paid_price = Column(Numeric)            
+    nr_paid_price = Column(Numeric)                 
     tx_main_image_url = Column(String) 
