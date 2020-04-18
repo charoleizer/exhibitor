@@ -5,6 +5,9 @@ orbs:
 
 jobs:
   build-and-test:
+    environment:
+      CC_TEST_REPORTER_ID: cdfdef2e505117577cfd3a5771853df55e157b48fb5f2cb6d1d19c60d27fc55f
+
     executor: python/default
     steps:
       - checkout
@@ -14,10 +17,6 @@ jobs:
       - run:
           name: Test
           command: |
-            pip install pytest
-            pytest
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
             ./cc-test-reporter before-build
             py.test --cov=tests --cov=core --cov-report xml
             ./cc-test-reporter after-build --coverage-input-type coverage.py --exit-code $?
